@@ -1,0 +1,1 @@
+L'adresse IP du serveur que j'utilise est 10.51.1.42. Nous pouvons le voir en lisant le fichier /etc/resolv.conf avec la commande cat.

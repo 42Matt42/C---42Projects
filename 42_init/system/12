@@ -1,0 +1,4 @@
+# Summarize disk usage (with print sizes in human readable format) of each directory in /var/ with their path
+# option -h for human readable
+# option -s not to mention the sub directories
+du -sh /var/*

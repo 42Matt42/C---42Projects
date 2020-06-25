@@ -1,0 +1,103 @@
+# List the services that are automatically launched when the machine boots
+# 
+# The name given to this type of service is init script.
+# 
+# Note_1:
+# All System V init scripts are stored in /etc/rc.d/init.d/ or /etc/init.d
+# directory. These scripts are used to control system startup and shutdown.
+# cat /etc/init.d/*
+#
+# Note_2:
+# Upstart is an event-based replacement for the /sbin/init daemon which handles
+# starting of tasks and services during boot, stopping them during shutdown and# supervising them while the system is running.i
+# cat /etc/init/*
+# 
+# Note_3:
+# systemd is a system and service manager for Linux operating systems. When
+# run as first process on boot (as PID 1), it acts as init system that
+# brings up and maintains userspace services.
+# 
+# the following cmd doesn't include the upstart jobs:
+# vagrant@stretch:~$ sudo service --status-all
+# [ - ]  console-setup.sh
+# [ + ]  cron
+# [ + ]  dbus
+# [ - ]  hwclock.sh
+# [ + ]  irqbalance
+# [ - ]  keyboard-setup.sh
+# [ + ]  kmod
+# [ + ]  networking
+# [ + ]  procps
+# [ - ]  rsync
+# [ + ]  rsyslog
+# [ + ]  ssh
+# [ - ]  sudo
+# [ + ]  udev
+# 
+# so we would rather use the following cmd:
+# vagrant@stretch:/$ systemctl list-units --type service
+# or to also include inactive process:
+# vagrant@stretch:/$ systemctl list-units --type service --all
+UNIT                            LOAD      ACTIVE   SUB     DESCRIPTION
+● apparmor.service                not-found inactive dead    apparmor.service
+apt-daily-upgrade.service       loaded    inactive dead    Daily apt upgrade and
+apt-daily.service               loaded    inactive dead    Daily apt download act
+● auditd.service                  not-found inactive dead    auditd.service
+● console-screen.service          not-found inactive dead    console-screen.service
+console-setup.service           loaded    active   exited  Set console font and k
+cron.service                    loaded    active   running Regular background pro
+dbus.service                    loaded    active   running D-Bus System Message B
+● display-manager.service         not-found inactive dead    display-manager.servic
+emergency.service               loaded    inactive dead    Emergency Shell
+getty-static.service            loaded    inactive dead    getty on tty2-tty6 if
+getty@tty1.service              loaded    active   running Getty on tty1
+ifup@eth0.service               loaded    active   exited  ifup for eth0
+irqbalance.service              loaded    active   running irqbalance daemon
+● kbd.service                     not-found inactive dead    kbd.service
+keyboard-setup.service          loaded    active   exited  Set the console keyboa
+kmod-static-nodes.service       loaded    active   exited  Create list of require
+networking.service              loaded    active   exited  Raise network interfac
+● plymouth-quit-wait.service      not-found inactive dead    plymouth-quit-wait.ser
+● plymouth-start.service          not-found inactive dead    plymouth-start.service
+rc-local.service                loaded    inactive dead    /etc/rc.local Compatib
+rescue.service                  loaded    inactive dead    Rescue Shell
+rsync.service                   loaded    inactive dead    fast remote file copy
+rsyslog.service                 loaded    active   running System Logging Service
+ssh.service                     loaded    active   running OpenBSD Secure Shell s
+systemd-ask-password-console.service loaded    inactive dead    Dispatch Password
+systemd-ask-password-wall.service loaded    inactive dead    Forward Password Req
+systemd-binfmt.service          loaded    inactive dead    Set Up Additional Bina
+systemd-fsck-root.service       loaded    inactive dead    File System Check on R
+systemd-fsckd.service           loaded    inactive dead    File System Check Daem
+systemd-hwdb-update.service     loaded    inactive dead    Rebuild Hardware Datab
+systemd-initctl.service         loaded    inactive dead    /dev/initctl Compatibi
+systemd-journal-flush.service   loaded    active   exited  Flush Journal to Persi
+systemd-journald.service        loaded    active   running Journal Service
+systemd-logind.service          loaded    active   running Login Service
+systemd-machine-id-commit.service loaded    inactive dead    Commit a transient m
+systemd-modules-load.service    loaded    active   exited  Load Kernel Modules
+systemd-random-seed.service     loaded    active   exited  Load/Save Random Seed
+systemd-remount-fs.service      loaded    active   exited  Remount Root and Kerne
+systemd-sysctl.service          loaded    active   exited  Apply Kernel Variables
+● systemd-sysusers.service        not-found inactive dead    systemd-sysusers.servi
+systemd-timesyncd.service       loaded    inactive dead    Network Time Synchroni
+systemd-tmpfiles-clean.service  loaded    inactive dead    Cleanup of Temporary D
+systemd-tmpfiles-setup-dev.service loaded    active   exited  Create Static Devic
+systemd-tmpfiles-setup.service  loaded    active   exited  Create Volatile Files
+systemd-udev-trigger.service    loaded    active   exited  udev Coldplug all Devi
+systemd-udevd.service           loaded    active   running udev Kernel Device Man
+● systemd-update-done.service     not-found inactive dead    systemd-update-done.se
+systemd-update-utmp-runlevel.service loaded    inactive dead    Update UTMP about
+systemd-update-utmp.service     loaded    active   exited  Update UTMP about Syst
+systemd-user-sessions.service   loaded    active   exited  Permit User Sessions
+● systemd-vconsole-setup.service  not-found inactive dead    systemd-vconsole-setup
+user@1000.service               loaded    active   running User Manager for UID 1
+vboxadd-service.service         loaded    active   running vboxadd-service.servic
+vboxadd.service                 loaded    active   exited  vboxadd.service
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+55 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.

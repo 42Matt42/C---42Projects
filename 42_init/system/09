@@ -1,0 +1,3 @@
+# cmd to see who is connected on the system
+who
+# we can also use the cmd w for extra details

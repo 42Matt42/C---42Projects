@@ -1,0 +1,2 @@
+# cmd to show the status of the SSH service
+sudo /etc/init.d/ssh status

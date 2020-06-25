@@ -1,0 +1,2 @@
+# What the file with the authorized RSA keys to connect via SSH ?
+# /home/vagrant/.ssh/authorized_keys

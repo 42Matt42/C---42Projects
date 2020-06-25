@@ -1,0 +1,9 @@
+Nous pouvons par exemple utiliser ces deux commandes a la suite:
+nslookup -type=ns slash16.org
+Puis, a partir du resultat obtenu:
+nslookup 205.251.192.144
+en prenant la premiere adresse IP de la partie "Authoritative answers" obtenue apres la 1ere cmd. 
+Nous comprenons alors que l'hebergeur est amazon.com (AWS = Amazon Web Services). L'un des serveurs s'appelle ns-1.amazon.com
+
+On aurait aussi pu utiliser la commande whois pour avoir un resultat similaire:
+whois 205.251.192.144

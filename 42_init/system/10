@@ -1,0 +1,5 @@
+# cmd to list the partition disk tables
+# with vagrant, we can use:
+lsblk
+# we can also use the following cmd :
+# sudo fdisk -l

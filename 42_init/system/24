@@ -1,0 +1,2 @@
+# cmd to list all packages installed on the machine
+apt list --installed

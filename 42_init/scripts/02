@@ -1,0 +1,16 @@
+#!/bin/sh
+# Make a script that deleted a logged user on the machine
+echo "What user do you want to delete ?"
+read username
+if id -u "$username" 2>/dev/null 1>/dev/null
+# "1>" redirects stdout to file "2>" redirects stderr to file
+# /dev/null is a special file, the Null device in order to discard the output
+# this file is commonly called a blackhole
+# equivalent to "> /dev/null 2>&1"
+then
+# Then, we delete the user
+	sudo deluser -f $username
+	echo "OK, user ‘$username’ deleted"
+else
+	echo "ERROR, user ‘$username’ does not exist"
+fi

@@ -1,0 +1,4 @@
+# cmd to change the system name
+# exemple:
+# sudo hostname VMmsaubin
+hostname

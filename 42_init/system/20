@@ -1,0 +1,2 @@
+# List all existing users on the machine
+cat /etc/passwd | awk -F: '{print$1}'

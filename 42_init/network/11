@@ -1,0 +1,12 @@
+Traceroute est un outil de diagnostic des réseaux permettant de déterminer le chemin suivi par un paquet. 
+La commande traceroute permet ainsi de dresser une cartographie des routeurs présents entre une machine source et une machine cible.
+
+A partir du resultat de la cmd traceroute, nous pouvons utiliser la cmd nslookup pour identifier les noms du materiel qui fait le lien avec nous, par exemple :
+
+/Users/msaubin/Desktop/Arc_init/rendu/network$ nslookup 10.60.1.11
+Server:		10.51.1.42
+Address:	10.51.1.42#53
+
+11.1.60.10.in-addr.arpa	name = nat-1.42.fr.
+
+nat correspond a l'acronyme NAT: Network Address Translation. Il s'agit du materiel faisant le lien entre le reseau local et internet.

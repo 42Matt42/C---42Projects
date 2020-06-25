@@ -1,0 +1,3 @@
+# cmd to add a local user
+sudo adduser username
+# replace username by the name of the new user

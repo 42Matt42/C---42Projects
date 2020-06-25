@@ -1,0 +1,26 @@
+#!/bin/sh
+# Make a script of your own
+echo "~~ Welcome ! ~~"
+echo "This custom script was made by msaubin for fun !"
+sleep 1
+echo "Would you like to restart the SSH service (y/n) ?"
+read foo
+sleep 1
+case $foo in
+	y|Y) sudo /etc/init.d/ssh restart ;;
+	*) echo "Oh, you didn't accept my offer, I'm sad :(" ;;
+esac
+sleep 1
+echo "By the way, what is the best cluster in 42 Paris ?"
+read foo2
+sleep 2
+echo "Hehe you are right ! ; ) I love it !"
+sleep 2
+echo "Did you enjoy spending time with me ?"
+read foo3
+sleep 3
+echo "Thank you !!!"
+sleep 2
+echo "<3"
+sleep 2
+echo "THE END"

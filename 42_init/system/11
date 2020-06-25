@@ -1,0 +1,2 @@
+# cmd to show file system disk space usage with print sizes in powers of 1024 (human readable)
+df -h

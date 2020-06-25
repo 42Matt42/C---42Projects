@@ -1,0 +1,2 @@
+# cmd that kills the process launched in background in the previous question
+sudo pkill tail

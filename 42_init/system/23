@@ -1,0 +1,10 @@
+# How to connect as a new user (on a graphic session and on a ssh session)
+# 
+# On a graphic session:
+# a) disconnect
+# b) type your username + password and valid
+# 
+# On a ssh session:
+# a) open a new terminal window
+# b) ssh username@localhost
+# replace username by your username 

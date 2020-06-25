@@ -1,0 +1,2 @@
+# cmd to connect to the device in ssh in parallel of the graphic session
+sudo iptables -L -n

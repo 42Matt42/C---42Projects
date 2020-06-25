@@ -1,0 +1,3 @@
+# Determine the PID of the SSHD service
+cat /var/run/sshd.pid
+# We can also use the cmd pidof sshd

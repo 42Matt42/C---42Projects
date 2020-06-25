@@ -1,0 +1,3 @@
+# cmd to stop the ssh service
+# with vagrant:
+pkill sshd

@@ -1,0 +1,14 @@
+# Find a service to launch tasks at regular schedules
+cron
+# There are specific uses under DEBIAN, refer to the man
+#
+# We can also use the cmd crontab:
+# Crontab -l : show current crontab
+# Crontab -e : modify crontab 
+#
+# Example:
+# crontab -e 
+# Choose Nano or Vim
+# Write a cmd with the format defined on the line "m h dom mon dow"
+# ex:
+# 42 1 * * * echo "Hello Evaluator !"

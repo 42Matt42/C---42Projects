@@ -1,0 +1,8 @@
+Il est necessaire de modifier le fichier etc/hosts accessible uniquement en lecteur seule pour un simple utilisateur.
+# echo "46.19.122.85    46.19.122.85" >> /etc/hosts
+Apres modification, nous obtenons:
+/$ cat etc/hosts
+127.0.0.1       localhost
+46.19.122.85    intra.42.fr
+255.255.255.255 broadcasthost
+::1             localhost
