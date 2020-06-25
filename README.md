@@ -1,2 +1,4 @@
 # C - 42Projects
-C projects made during my experience in 42 Paris
+Projects made during my experience in 42 Paris:
+- C
+- Network projects (init, roger skyline 1.5)
